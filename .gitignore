@@ -1,4 +1,5 @@
-prisma/db_volume
+/test
+/prisma/db_volume
 
 # compiled output
 /dist

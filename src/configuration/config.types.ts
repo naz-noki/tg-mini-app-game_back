@@ -3,4 +3,5 @@ export interface I_Config {
     PORT: string,
     JWT_SECRET: string,
     ALLOW_ORIGINS: string,
+    BOT_TOKEN: string,
 };

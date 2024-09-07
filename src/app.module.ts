@@ -1,11 +1,10 @@
 import { MiddlewareConsumer, Module, NestModule, RequestMethod } from "@nestjs/common";
-import { PrismaService } from "./db/prisma.service";
 import { ConfigModule } from "@nestjs/config";
-import { ConfigService } from "./configuration/config.service";
 import { UserModule } from "./modules/user/user.module";
 import { JwtModule } from "@nestjs/jwt";
 import { JwtStrategy } from "./strategy/jwt.strategy";
 import { CorsMiddleware } from "./middlewares/cors.middleware";
+import { PointsModule } from './modules/points/points.module';
 import * as cookieParser from "cookie-parser"; 
 import * as morgan from "morgan";
 
@@ -21,6 +20,7 @@ import * as morgan from "morgan";
     }),
 
     UserModule,
+    PointsModule,
   ],
   providers: [JwtStrategy],
 })
